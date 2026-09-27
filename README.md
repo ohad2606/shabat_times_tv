@@ -17,7 +17,6 @@ cd ~/tv-src
 
 sudo mkdir -p /var/www/tv
 sudo chown "$USER" /var/www/tv
-cp deploy/_reload.js /var/www/tv/_reload.js        # לא נוצר אוטומטית
 
 sudo cp deploy/nginx-tv-display.conf /etc/nginx/sites-available/tv-display
 sudo ln -s /etc/nginx/sites-available/tv-display /etc/nginx/sites-enabled/
@@ -141,3 +140,13 @@ sudo ln -s /etc/nginx/sites-available/tv-display /etc/nginx/sites-enabled/ \
 nginx מזריק את `_reload.js` לכל דף שמוגש תחת `/tv/`. הסקריפט בודק כל 10 שניות
 מונה גרסה שמתעדכן בכל פרסום, ומרענן את הדף כשהוא משתנה — כך שטלוויזיה פתוחה
 מתעדכנת לבד, בלי לגעת בשלט.
+
+הקובץ אינו חלק מתוצר הבנייה אלא יושב ב-`deploy/`. `tv-deploy.sh` זורע אותו
+לתיקיית ההגשה בפריסה הראשונה ומשמר אותו אחר כך, כך שאפשר לערוך אותו במקום
+מבלי שפרסום יידרוס את השינוי.
+
+לבדיקה מול תיקייה זמנית במקום `/var/www/tv`:
+
+```bash
+TV_ROOT=/tmp/testroot ./deploy/tv-deploy.sh --dir dist
+```

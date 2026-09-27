@@ -9,10 +9,18 @@
 # refreshes itself within ~10 seconds. No remote needed.
 
 set -euo pipefail
-ROOT=/var/www/tv
+ROOT="${TV_ROOT:-/var/www/tv}"
+HERE="$(cd "$(dirname "$0")" && pwd)"
 
 usage() { sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//'; exit 1; }
 [ $# -ge 1 ] || usage
+
+# The auto-reload client is not part of the build output -- it ships beside this
+# script and is preserved across deploys. On a fresh machine the web root is
+# empty, so seed it here rather than making it a manual setup step everyone
+# forgets, which would leave TVs never picking up a new deploy.
+mkdir -p "$ROOT"
+[ -f "$ROOT/_reload.js" ] || cp "$HERE/_reload.js" "$ROOT/_reload.js"
 
 if [ "${1:-}" = "--dir" ]; then
   SRC="${2:?--dir needs a folder}"
