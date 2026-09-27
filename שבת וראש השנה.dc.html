@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #1a0a10; }
+  * { box-sizing: border-box; }
+  a { color: oklch(0.82 0.11 85); text-decoration: none; }
+  a:hover { color: oklch(0.9 0.09 88); }
+  @keyframes emberGlow {
+
+    0%, 100% { opacity: 0.55; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.06); }
+  }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<div style="position: fixed; inset: 0; overflow: hidden; background: oklch(0.1 0.03 26); display: flex; align-items: center; justify-content: center;"><div style="position: relative; width: 1920px; height: 1080px; flex: none; overflow: hidden; transform-origin: center center; transform: scale({{ scale }}); direction: rtl; background: radial-gradient(115% 80% at 50% 112%, oklch(0.42 0.14 45 / 0.55) 0%, transparent 62%), radial-gradient(70% 50% at 50% -8%, oklch(0.5 0.13 28 / 0.45) 0%, transparent 70%), linear-gradient(175deg, oklch(0.18 0.06 18) 0%, oklch(0.13 0.04 22) 55%, oklch(0.1 0.03 26) 100%); font-family: 'Assistant', 'Helvetica Neue', Helvetica, sans-serif; color: oklch(0.95 0.02 80); display: flex; flex-direction: column; gap: 22px; padding: 30px 70px 28px;">
+
+  <div style="position: absolute; inset: 0;">
+    <image-slot id="rh-bg" shape="rect" fit="cover" src="uploads/Codex Image Sep 11, 2026, 05_01_51 PM.png" placeholder="גררו לכאן תמונת רקע"></image-slot>
+    <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, oklch(0.08 0.03 26 / 0.72) 0%, oklch(0.08 0.03 26 / 0.1) 20%, oklch(0.08 0.03 26 / 0.05) 48%, oklch(0.08 0.03 26 / 0.4) 100%);"></div>
+  </div>
+
+  <header style="position: relative; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px;">
+    <span style="font-family: 'Frank Ruhl Libre', serif; font-size: 34px; letter-spacing: 0.04em; color: oklch(0.86 0.11 85); justify-self: start;">בס״ד</span>
+    <span style="font-family: 'Frank Ruhl Libre', serif; font-weight: 700; font-size: 72px; line-height: 1.1; color: oklch(0.93 0.06 84); letter-spacing: 0.06em; text-align: center;">משפחת דוד</span>
+    <span style="justify-self: end; display: flex; align-items: center; gap: 10px;">
+      <span style="width: 9px; height: 9px; background: oklch(0.84 0.12 84); transform: rotate(45deg);"></span>
+      <span style="width: 120px; height: 1px; background: oklch(0.84 0.1 85 / 0.5);"></span>
+      <span style="width: 9px; height: 9px; background: oklch(0.84 0.12 84); transform: rotate(45deg);"></span>
+    </span>
+  </header>
+
+  <div style="position: relative; flex: 1; min-height: 0;">
+    <div style="position: absolute; top: 96px; right: -20px; width: 720px; padding: 44px 30px 50px 110px; text-align: right; background: radial-gradient(92% 88% at 88% 46%, oklch(0.07 0.02 26 / 0.62) 0%, oklch(0.07 0.02 26 / 0.3) 54%, transparent 90%);">
+      <div style="display: flex; align-items: center; gap: 16px; color: oklch(0.88 0.11 85);">
+        <span style="font-size: 26px; letter-spacing: 0.24em; font-weight: 600; text-shadow: 0 3px 16px oklch(0.06 0.02 25 / 0.9);">ראש השנה ושבת קודש</span>
+        <span style="width: 46px; height: 1px; background: currentColor; opacity: 0.65;"></span>
+      </div>
+      <h1 style="margin: 20px 0 0; font-family: 'Frank Ruhl Libre', serif; font-weight: 500; font-size: 98px; line-height: 1.05; color: oklch(0.98 0.035 85); text-shadow: 0 6px 36px oklch(0.06 0.02 25 / 0.9);">חג סוכות שמח<br /><span style="color: oklch(0.88 0.13 84);">ושבת שלום</span></h1>
+      <p style="margin: 24px 0 0; font-size: 30px; line-height: 1.5; font-weight: 300; color: oklch(0.97 0.02 80); text-shadow: 0 3px 20px oklch(0.06 0.02 25 / 0.95);">תכלה שנה וקללותיה, תחל שנה וברכותיה.<br />שנת בריאות, פרנסה טובה ושלום בבית.</p>
+    </div>
+  </div>
+
+  <main style="position: absolute; left: 0; right: 0; bottom: 44px; display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 46px 60px 34px; background: radial-gradient(66% 140% at 50% 106%, oklch(0.06 0.02 26 / 0.9) 0%, oklch(0.06 0.02 26 / 0.72) 42%, oklch(0.06 0.02 26 / 0.32) 70%, transparent 92%);">
+
+    <div style="display: flex; align-items: baseline; justify-content: center; gap: 30px; text-shadow: 0 3px 20px oklch(0.06 0.02 25 / 0.95);">
+      <span style="font-family: 'Frank Ruhl Libre', serif; font-size: 46px; color: oklch(0.98 0.03 85);">{{ dayName }}</span>
+      <span style="width: 8px; height: 8px; background: oklch(0.86 0.12 84); transform: rotate(45deg);"></span>
+      <span style="font-family: 'Frank Ruhl Libre', serif; font-size: 46px; color: oklch(0.98 0.03 85);">{{ hebDate }}</span>
+      <span style="font-size: 26px; color: oklch(0.88 0.02 80);">{{ gregDate }}</span>
+      <span style="width: 8px; height: 8px; background: oklch(0.86 0.12 84); transform: rotate(45deg);"></span>
+      <span style="font-family: 'Frank Ruhl Libre', serif; font-size: 46px; font-variant-numeric: tabular-nums; letter-spacing: 0.02em; color: oklch(0.98 0.03 85);">{{ clock }}</span>
+      <span style="font-size: 26px; color: oklch(0.88 0.02 80);">{{ cityLabel }}</span>
+    </div>
+
+    <div style="display: flex; align-items: stretch; justify-content: center; gap: 74px; text-shadow: 0 3px 22px oklch(0.06 0.02 25 / 0.95);">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <span style="font-size: 30px; font-weight: 600; color: oklch(0.96 0.02 80);">{{ entryLabel }}</span>
+        <span style="font-family: 'Frank Ruhl Libre', serif; font-size: 78px; line-height: 1; font-variant-numeric: tabular-nums; color: oklch(0.89 0.13 84);">{{ entryTime }}</span>
+        <span style="font-size: 25px; color: oklch(0.88 0.02 80);">{{ entryDate }}</span>
+      </div>
+
+      <div style="width: 1px; background: linear-gradient(180deg, transparent, oklch(0.86 0.1 85 / 0.55), transparent);"></div>
+
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <span style="font-size: 30px; font-weight: 600; color: oklch(0.96 0.02 80);">{{ exitLabel }}</span>
+        <span style="font-family: 'Frank Ruhl Libre', serif; font-size: 78px; line-height: 1; font-variant-numeric: tabular-nums; color: oklch(0.98 0.03 85);">{{ exitTime }}</span>
+        <span style="font-size: 25px; color: oklch(0.88 0.02 80);">{{ exitDate }}</span>
+      </div>
+    </div>
+  </main>
+
+  <footer style="position: relative; display: none; font-size: 19px; color: oklch(0.74 0.02 80);">
+
+  </footer>
+</div>
+
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;entryTimeOverride&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;18:21&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;זמנים&quot;},&quot;exitTimeOverride&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;19:27&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;זמנים&quot;},&quot;city&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;ירושלים&quot;,&quot;תל אביב&quot;,&quot;חיפה&quot;,&quot;באר שבע&quot;,&quot;נתניה&quot;],&quot;default&quot;:&quot;ירושלים&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;זמנים&quot;},&quot;showSeconds&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;תוכן&quot;},&quot;showSimanim&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;תוכן&quot;}}">
+const TZ = 'Asia/Jerusalem';
+const CITIES = {
+  'ירושלים': { lat: 31.7683, lon: 35.2137, candle: 40, tzeit: 42 },
+  'תל אביב': { lat: 32.0853, lon: 34.7818, candle: 20, tzeit: 40 },
+  'חיפה': { lat: 32.794, lon: 34.9896, candle: 30, tzeit: 40 },
+  'באר שבע': { lat: 31.2518, lon: 34.7913, candle: 20, tzeit: 40 },
+  'נתניה': { lat: 32.3215, lon: 34.8532, candle: 20, tzeit: 40 }
+};
+const HEB_EPOCH = -1373427;
+const DOW = ['יום ראשון', 'יום שני', 'יום שלישי', 'יום רביעי', 'יום חמישי', 'יום שישי', 'שבת קודש'];
+const SYMBOLS = [
+  { id: 'sym-apple', name: 'תפוח בדבש' },
+  { id: 'sym-pomegranate', name: 'רימון' },
+  { id: 'sym-dates', name: 'תמרים' },
+  { id: 'sym-olive', name: 'עלי זית' },
+  { id: 'sym-candles', name: 'נרות שבת' }
+];
+const SIMANIM = [
+  { name: 'תפוח בדבש', wish: 'שתתחדש עלינו שנה טובה ומתוקה' },
+  { name: 'רימון', wish: 'שירבו זכויותינו כרימון' },
+  { name: 'תמרים', wish: 'שיתמו שונאינו ואויבינו' },
+  { name: 'רוביא', wish: 'שירבו זכויותינו וטובותינו' },
+  { name: 'קרא', wish: 'שייקרע רוע גזר דיננו' },
+  { name: 'סלק', wish: 'שיסתלקו אויבינו ושונאינו' },
+  { name: 'ראש דג', wish: 'שנהיה לראש ולא לזנב' }
+];
+
+function isLeapHeb(y) { return ((y * 7 + 1) % 19) < 7; }
+function elapsedDays(y) {
+  const monthsElapsed = Math.floor((235 * y - 234) / 19);
+  const parts = 12084 + 13753 * monthsElapsed;
+  let day = monthsElapsed * 29 + Math.floor(parts / 25920);
+  if (((3 * (day + 1)) % 7) < 3) day += 1;
+  return day;
+}
+function yearDelay(y) {
+  const last = elapsedDays(y - 1), present = elapsedDays(y), next = elapsedDays(y + 1);
+  if (next - present === 356) return 2;
+  if (present - last === 382) return 1;
+  return 0;
+}
+function hebNewYear(y) { return HEB_EPOCH + elapsedDays(y) + yearDelay(y); }
+function hebYearLength(y) { return hebNewYear(y + 1) - hebNewYear(y); }
+function hebMonths(y) {
+  const len = hebYearLength(y), leap = isLeapHeb(y);
+  const cheshvan = (len === 355 || len === 385) ? 30 : 29;
+  const kislev = (len === 353 || len === 383) ? 29 : 30;
+  const m = [
+    { n: 'תשרי', d: 30 }, { n: 'חשוון', d: cheshvan }, { n: 'כסלו', d: kislev },
+    { n: 'טבת', d: 29 }, { n: 'שבט', d: 30 }
+  ];
+  if (leap) { m.push({ n: 'אדר א׳', d: 30 }, { n: 'אדר ב׳', d: 29 }); }
+  else { m.push({ n: 'אדר', d: 29 }); }
+  m.push({ n: 'ניסן', d: 30 }, { n: 'אייר', d: 29 }, { n: 'סיוון', d: 30 },
+    { n: 'תמוז', d: 29 }, { n: 'אב', d: 30 }, { n: 'אלול', d: 29 });
+  return m;
+}
+function absFromGreg(y, m, d) {
+  const leap = (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0;
+  const lens = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  let n = d + 365 * (y - 1) + Math.floor((y - 1) / 4) - Math.floor((y - 1) / 100) + Math.floor((y - 1) / 400);
+  for (let i = 0; i < m - 1; i++) n += lens[i];
+  return n;
+}
+function gregFromAbs(abs) {
+  let y = Math.floor(abs / 366) + 1;
+  while (absFromGreg(y + 1, 1, 1) <= abs) y++;
+  let m = 1;
+  while (true) {
+    const leap = (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0;
+    const lens = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (absFromGreg(y, m, lens[m - 1]) >= abs) break;
+    m++;
+  }
+  return { y: y, m: m, d: abs - absFromGreg(y, m, 1) + 1 };
+}
+function hebFromAbs(abs) {
+  let y = Math.floor((abs - HEB_EPOCH) / 366) + 1;
+  while (hebNewYear(y + 1) <= abs) y++;
+  while (hebNewYear(y) > abs) y--;
+  let off = abs - hebNewYear(y);
+  const months = hebMonths(y);
+  let i = 0;
+  while (off >= months[i].d) { off -= months[i].d; i++; }
+  return { y: y, month: months[i].n, mi: i, day: off + 1 };
+}
+function gematria(n) {
+  if (n === 15) return 'ט״ו';
+  if (n === 16) return 'ט״ז';
+  const t = [[400, 'ת'], [300, 'ש'], [200, 'ר'], [100, 'ק'], [90, 'צ'], [80, 'פ'], [70, 'ע'], [60, 'ס'], [50, 'נ'], [40, 'מ'], [30, 'ל'], [20, 'כ'], [10, 'י'], [9, 'ט'], [8, 'ח'], [7, 'ז'], [6, 'ו'], [5, 'ה'], [4, 'ד'], [3, 'ג'], [2, 'ב'], [1, 'א']];
+  let s = '', x = n;
+  for (let i = 0; i < t.length; i++) { while (x >= t[i][0]) { s += t[i][1]; x -= t[i][0]; } }
+  if (s.length === 1) return s + '׳';
+  return s.slice(0, -1) + '״' + s.slice(-1);
+}
+function sunsetDate(y, m, d, lat, lonEast) {
+  const rad = Math.PI / 180;
+  const jdNoon = Date.UTC(y, m - 1, d, 12) / 86400000 + 2440587.5;
+  const n = Math.round(jdNoon - 2451545.0 + 0.0008);
+  const js = n - lonEast / 360;
+  const M = (357.5291 + 0.98560028 * js) % 360;
+  const C = 1.9148 * Math.sin(M * rad) + 0.02 * Math.sin(2 * M * rad) + 0.0003 * Math.sin(3 * M * rad);
+  const lam = (M + C + 180 + 102.9372) % 360;
+  const jt = 2451545.0 + js + 0.0053 * Math.sin(M * rad) - 0.0069 * Math.sin(2 * lam * rad);
+  const dec = Math.asin(Math.sin(lam * rad) * Math.sin(23.44 * rad));
+  const cosw = (Math.sin(-0.833 * rad) - Math.sin(lat * rad) * Math.sin(dec)) / (Math.cos(lat * rad) * Math.cos(dec));
+  const w = Math.acos(Math.max(-1, Math.min(1, cosw))) / rad;
+  const jset = jt + w / 360;
+  return new Date((jset - 2440587.5) * 86400000);
+}
+function partsIn(date) {
+  const f = new Intl.DateTimeFormat('en-GB', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' });
+  const p = {};
+  f.formatToParts(date).forEach(function (x) { if (x.type !== 'literal') p[x.type] = x.value; });
+  return { y: +p.year, m: +p.month, d: +p.day };
+}
+
+class Component extends DCLogic {
+  state = { now: new Date() };
+
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ now: new Date() }), 1000);
+    this.onResize = () => this.forceUpdate();
+    window.addEventListener('resize', this.onResize);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    window.removeEventListener('resize', this.onResize);
+  }
+
+  renderVals() {
+    const cityName = CITIES[this.props.city] ? this.props.city : 'ירושלים';
+    const city = CITIES[cityName];
+    const showSeconds = this.props.showSeconds ?? true;
+    const now = this.state.now;
+    const tp = partsIn(now);
+    const todayAbs = absFromGreg(tp.y, tp.m, tp.d);
+
+    const fmtTime = (d) => new Intl.DateTimeFormat('he-IL', { timeZone: TZ, hour: '2-digit', minute: '2-digit', hour12: false }).format(d);
+    const hebLabel = (abs) => {
+      const h = hebFromAbs(abs);
+      return gematria(h.day) + ' ב' + h.month;
+    };
+    const gregLabel = (abs) => {
+      const g = gregFromAbs(abs);
+      const dt = new Date(Date.UTC(g.y, g.m - 1, g.d, 12));
+      return new Intl.DateTimeFormat('he-IL', { timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long' }).format(dt);
+    };
+    const isHoly = (abs) => {
+      if (abs % 7 === 6) return true;
+      const h = hebFromAbs(abs);
+      return h.mi === 0 && (h.day === 1 || h.day === 2);
+    };
+    const sunsetOn = (abs) => {
+      const g = gregFromAbs(abs);
+      return sunsetDate(g.y, g.m, g.d, city.lat, city.lon);
+    };
+    const candleOn = (abs) => new Date(sunsetOn(abs).getTime() - city.candle * 60000);
+    const tzeitOn = (abs) => new Date(sunsetOn(abs).getTime() + city.tzeit * 60000);
+
+    const hebAbs = todayAbs + (now.getTime() >= sunsetOn(todayAbs).getTime() ? 1 : 0);
+    const heb = hebFromAbs(hebAbs);
+
+    let start = null, end = null;
+    for (let i = 0; i < 60; i++) {
+      const c = todayAbs + i;
+      if (!isHoly(c)) continue;
+      let s = c, e = c;
+      while (isHoly(s - 1)) s--;
+      while (isHoly(e + 1)) e++;
+      if (tzeitOn(e).getTime() < now.getTime()) { i = e - todayAbs; continue; }
+      start = s; end = e; break;
+    }
+    if (start === null) { start = todayAbs; end = todayAbs; }
+
+    const entryAbs = start - 1;
+    const hasRH = (() => {
+      for (let a = start; a <= end; a++) {
+        const h = hebFromAbs(a);
+        if (h.mi === 0 && (h.day === 1 || h.day === 2)) return true;
+      }
+      return false;
+    })();
+    const hasShabbat = (() => { for (let a = start; a <= end; a++) if (a % 7 === 6) return true; return false; })();
+
+    let title, entryLabel;
+    const exitLabel = 'יציאת שבת';
+    if (hasRH) {
+      title = 'ראש השנה ' + gematria(hebFromAbs(end).y % 1000) + (hasShabbat ? ' ושבת קודש' : '');
+      entryLabel = 'הדלקת נרות וכניסת החג';
+    } else {
+      title = 'שבת קודש · ' + hebLabel(end);
+      entryLabel = 'כניסת השבת';
+    }
+
+    const toMin = (s) => { const m = /^(\d{1,2}):(\d{2})$/.exec((s || '').trim()); return m ? (+m[1]) * 60 + (+m[2]) : null; };
+    const minsOf = (d) => { const p = fmtTime(d).split(':'); return (+p[0]) * 60 + (+p[1]); };
+    const shift = (d, m) => new Date(d.getTime() + m * 60000);
+    const compEntry = candleOn(start - 1), compExit = tzeitOn(end);
+    const ovEntry = toMin(this.props.entryTimeOverride ?? '18:21');
+    const ovExit = toMin(this.props.exitTimeOverride ?? '19:27');
+    const dEntry = ovEntry === null ? 0 : ovEntry - minsOf(compEntry);
+    const dExit = ovExit === null ? 0 : ovExit - minsOf(compExit);
+
+    let shabbatEnd = end;
+    for (let a = end; a >= start; a--) { if (a % 7 === 6) { shabbatEnd = a; break; } }
+
+    let nextSat = end + 1;
+    while (nextSat % 7 !== 6) nextSat++;
+
+    const clockFmt = new Intl.DateTimeFormat('he-IL', Object.assign({ timeZone: TZ, hour: '2-digit', minute: '2-digit', hour12: false }, showSeconds ? { second: '2-digit' } : {}));
+
+    return {
+      dayName: DOW[hebAbs % 7],
+      hebDate: gematria(heb.day) + ' ב' + heb.month + ' ' + gematria(heb.y % 1000),
+      gregDate: new Intl.DateTimeFormat('he-IL', { timeZone: TZ, day: 'numeric', month: 'long', year: 'numeric' }).format(now),
+      clock: clockFmt.format(now),
+      cityLabel: cityName,
+      occasionTitle: title,
+      entryLabel: entryLabel,
+      entryTime: fmtTime(shift(compEntry, dEntry)),
+      entryDate: gregLabel(entryAbs) + ' · ' + hebLabel(entryAbs),
+      exitLabel: exitLabel,
+      exitTime: fmtTime(shift(compExit, dExit)),
+      exitDate: gregLabel(shabbatEnd) + ' · ' + hebLabel(shabbatEnd),
+      nextLabel: (() => { const g = gregFromAbs(nextSat - 1); return 'השבת הבאה · ' + g.d + '.' + g.m; })(),
+      nextTime: 'כניסה ' + fmtTime(shift(candleOn(nextSat - 1), dEntry)) + ' · יציאה ' + fmtTime(shift(tzeitOn(nextSat), dExit)),
+      scale: Math.min(window.innerWidth / 1920, window.innerHeight / 1080),
+      simanim: SIMANIM,
+      simanimLine: SIMANIM.map(function (s) { return s.name; }).join(' · '),
+      symbols: SYMBOLS,
+      showSimanim: this.props.showSimanim ?? true,
+      methodNote: 'זמני ' + cityName + ' · הדלקת נרות 40 דק׳ לפני השקיעה'
+    };
+  }
+}
+</script>
+</body>
+</html>
